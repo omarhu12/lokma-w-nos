@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Nunito+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* font-family: "Nunito Sans", sans-serif; */
+}
+
+body {
+  font-family: "Marcellus", serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 5rem;
+  position: relative;
+  z-index: 100;
+}
+
+header ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  /* opacity: 0.7; */
+  /* font-weight: bold; */
+  font-size: 1.1rem;
+  /* text-transform: uppercase; */
+}
+
+ul li#contact a {
+  border: 1px solid #dbdcd1;
+  padding: 0.5rem 1.5rem;
+  margin-top: -0.5rem;
+  /* margin-left: 2.5rem; */
+}
+
+section#firstPage {
+  /* background-color: #1f3e67; */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+}
+ol {
+  display: none;
+}
+
+section#firstPage div.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section#firstPage div.container img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section#firstPage div.txtBlock {
+  position: relative;
+  color: white;
+  z-index: 600;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: fit-content;
+}
+
+section#firstPage div.txtBlock h1 {
+  font-size: 4rem;
+}
+
+section#firstPage div.txtBlock p {
+  text-align: center;
+  width: 50%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+section#firstPage div.txtBlock a {
+  border: none;
+  font: inherit;
+  padding: 1rem 4rem;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+section#firstPage div.txtBlock a#menu {
+  background-color: #fff;
+  color: #000;
+  margin-right: 2rem;
+}
+
+@media (max-width: 750px) {
+  header {
+    padding: 3rem 2rem;
+  }
+  header ul {
+    display: none;
+  }
+
+  section#firstPage div.txtBlock.remove {
+    z-index: 0;
+    display: none;
+  }
+
+  .hamburger {
+    position: relative;
+    display: block;
+    width: 55px;
+    /* height: 35px; */
+    z-index: 2000000000000;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+  }
+
+  .hamburger .bar,
+  .hamburger:after,
+  .hamburger:before {
+    content: "";
+    display: block;
+    width: 80%;
+    border-radius: 5px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0px;
+    transition: 0.4s;
+  }
+
+  .hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+  }
+
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+  }
+
+  .hamburger.is-active .bar {
+    opacity: 0;
+  }
+
+  ol {
+    background-color: #000000;
+    /* border: 2px solid black; */
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+    list-style: none;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    z-index: 100000000;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+
+  ol li a {
+    text-decoration: none;
+    color: #fff;
+    /* opacity: 0.7; */
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: "Barlow", sans-serif;
+  }
+
+  ol li#contact a {
+    border: 1px solid #dbdcd1;
+    padding: 0.5rem 1.5rem;
+    margin-top: -0.5rem;
+    margin-left: 0;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  section#firstPage div.txtBlock h1 {
+    font-size: 2.2rem;
+  }
+
+  section#firstPage div.txtBlock p {
+    text-align: center;
+    width: 80%;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  section#firstPage div.txtBlock a {
+    border: none;
+    font: inherit;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 30px;
+  }
+
+  section#firstPage div.txtBlock a#menu {
+    background-color: #fff;
+    color: #000;
+    margin-right: 2rem;
+  }
+}
+
+section#two {
+  height: 100vh;
+  background-color: #f5f7fa;
+  position: relative;
+  padding: 4rem 0;
+}
+
+section#two h1 {
+  font-size: 3rem;
+  text-align: center;
+  /* padding-top: 3rem; */
+}
+
+section#two div.row {
+  display: flex;
+  width: 99.9%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+section#two div.row div.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 3rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 95px 208px -89px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 5px 95px 208px -89px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 5px 95px 208px -89px rgba(0, 0, 0, 0.43);
+}
+
+section#two div.row div.small {
+  padding: 4rem 2rem;
+}
+
+section#two div.row div.card p {
+  font-size: 2rem;
+  width: 19rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+section#two div.row div.card div.person {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+section#two div.row div.card div.person img {
+  border-radius: 50%;
+  width: 50px;
+}
+
+
+@media (max-width: 1300px) {
+  section#two div.row {
+    flex-direction: column;
+    position: static;
+    top: 0;
+    transform: translate(0, 0);
+  }
+  section#two {
+    height: fit-content;
+  }
+
+  section#two div.row div.card {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+  }
+  section#two div.row div.card p {
+    font-size: 2rem;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 500px) {
+  section#two div.row div.card p {
+    font-size: 2rem;
+    width: 95%;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  section#two div.row div.card div.person img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+section#two div.row div.card div.person div.info h2{
+    font-size: 1rem;
+}
+
+}
